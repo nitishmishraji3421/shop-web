@@ -204,8 +204,8 @@
 
   <script>
     function sendOrder(productName, price) {
-      const message = `Hello! I want to buy *${productName}* (₹${price}).\n\nPlease provide payment options:\n1. Advance via UPI\n2. COD (Cash on Delivery)\n\nHalf-payment can be made via UPI, balance on delivery.`;
-      const phone = '9534141604';
+      const message = `Hello! I want to buy *${productName}* (₹${price}).\n\nPlease provide payment options:\n1. Advance via UPI\n2. COD (Cash on Delivery)\n\nHalf-payment can be made via UPI, balance on delivery\n3. give us the location of the shop with full details..`;
+      const phone = '92796 62433';
       const encoded = encodeURIComponent(message);
       window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
     }
