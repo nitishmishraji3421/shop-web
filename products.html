@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LocalWalley - Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #090909; color: #f0f0f0; }
+
+    .navbar {
+      background: linear-gradient(to right, #1a1a1a, #222);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #2e2e2e;
+      box-shadow: 0 2px 10px rgba(255,0,79,0.1);
+    }
+
+    .logo { font-size: 2rem; font-weight: 700; color: #ff2e63; }
+    .logo span { color: #08d9d6; }
+    nav a { margin-left: 20px; color: #ccc; text-decoration: none; }
+    nav a:hover { color: #ff2e63; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: #131313;
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 46, 99, 0.05);
+      transition: 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 46, 99, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      color: #08d9d6;
+      margin: 0.5rem 0;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: #aaa;
+      margin-bottom: 0.8rem;
+    }
+
+    .product-card span {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ff2e63;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background: linear-gradient(to right, #ff2e63, #ff8c42);
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 46, 99, 0.3);
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #e60045, #ff5500);
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 2rem;
+      color: #999;
+      margin-top: 3rem;
+    }
+
+    @media(max-width: 768px) {
+      .product-card img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Local<span>Walley</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\wallet.webp" alt="Leather Wallet" />
+      <h3>Leather Wallet</h3>
+      <p>Genuine leather with stylish finish.</p>
+      <span>₹499</span>
+      <a href="#" class="btn" onclick="sendOrder('Leather Wallet', 499)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\buds.webp" alt="Wireless Earbuds" />
+      <h3>Wireless Earbuds</h3>
+      <p>High bass, noise cancellation supported.</p>
+      <span>₹899</span>
+      <a href="#" class="btn" onclick="sendOrder('Wireless Earbuds', 899)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\watch.webp" alt="Digital Watch" />
+      <h3>Digital Watch</h3>
+      <p>Multifunction smart display with sensors.</p>
+      <span>₹1599</span>
+      <a href="#" class="btn" onclick="sendOrder('Digital Watch', 1599)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\speaker.webp" alt="Bluetooth Speaker" />
+      <h3>Bluetooth Speaker</h3>
+      <p>Portable and powerful music system.</p>
+      <span>₹1199</span>
+      <a href="#" class="btn" onclick="sendOrder('Bluetooth Speaker', 1199)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\bag.jpg" alt="LED Backpack" />
+      <h3>LED Backpack</h3>
+      <p>Trendy tech-smart bag with lights.</p>
+      <span>₹1999</span>
+      <a href="#" class="btn" onclick="sendOrder('LED Backpack', 1999)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\band.webp" alt="Fitness Band" />
+      <h3>Fitness Band</h3>
+      <p>Track your steps, heart rate & more.</p>
+      <span>₹799</span>
+      <a href="#" class="btn" onclick="sendOrder('Fitness Band', 799)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\charger.webp" alt="Portable Charger" />
+      <h3>Portable Charger</h3>
+      <p>10000mAh slim power bank.</p>
+      <span>₹649</span>
+      <a href="#" class="btn" onclick="sendOrder('Portable Charger', 649)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\glass.webp" alt="Smart Sunglasses" />
+      <h3>Smart Sunglasses</h3>
+      <p>Built-in Bluetooth & mic feature.</p>
+      <span>₹1499</span>
+      <a href="#" class="btn" onclick="sendOrder('Smart Sunglasses', 1499)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\mouse.webp" alt="Gaming Mouse" />
+      <h3>Gaming Mouse</h3>
+      <p>RGB lights, high DPI precision.</p>
+      <span>₹899</span>
+      <a href="#" class="btn" onclick="sendOrder('Gaming Mouse', 899)">Buy Now</a>
+    </div>
+
+    <div class="product-card">
+      <img src="C:\shyam thakur website sales\light.jpeg" alt="USB LED Light" />
+      <h3>USB LED Light</h3>
+      <p>Perfect for laptop or desk setup.</p>
+      <span>₹299</span>
+      <a href="#" class="btn" onclick="sendOrder('USB LED Light', 299)">Buy Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LocalWalley. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendOrder(productName, price) {
+      const message = `Hello! I want to buy *${productName}* (₹${price}).\n\nPlease provide payment options:\n1. Advance via UPI\n2. COD (Cash on Delivery)\n\nHalf-payment can be made via UPI, balance on delivery.`;
+      const phone = '9534141604';
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LocalWalley - Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #090909; color: #f0f0f0; }
+
+    .navbar {
+      background: linear-gradient(to right, #1a1a1a, #222);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #2e2e2e;
+      box-shadow: 0 2px 10px rgba(255,0,79,0.1);
+    }
+    .logo { font-size: 2rem; font-weight: 700; color: #ff2e63; }
+    .logo span { color: #08d9d6; }
+    nav a { margin-left: 20px; color: #ccc; text-decoration: none; }
+    nav a:hover { color: #ff2e63; }
+
+    .contact-section {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: #131313;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255, 46, 99, 0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #ff2e63, #08d9d6);
+     background-clip: text;
+    -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      background: #1f1f1f;
+      border: 1px solid #2c2c2c;
+      color: #fff;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .contact-section input:focus,
+    .contact-section textarea:focus {
+      border-color: #ff2e63;
+      outline: none;
+      box-shadow: 0 0 10px rgba(255, 46, 99, 0.4);
+    }
+
+    .btn {
+      background: linear-gradient(to right, #ff2e63, #ff8c42);
+      padding: 0.9rem;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 46, 99, 0.4);
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #e60045, #ff5500);
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 2rem;
+      color: #999;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Local<span>Walley</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); alert('Thank you for contacting LocalWalley!');">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea rows="6" name="message" placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LocalWalley. Built with ❤️ for local businesses.</p>
+  </footer>
+
+</body>
+</html>
